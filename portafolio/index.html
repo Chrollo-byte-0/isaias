@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Codificación y adaptación a pantallas móviles (viewport-fit=cover usa toda la pantalla) -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Título y descripción de la página (aparecen en el navegador y buscadores) -->
+<title>Isaías — Portafolio</title>
+<meta name="description" content="Estudiante de ingeniería enfocado en fusionar matemáticas y tecnología para desarrollar software estructurado y soluciones eficientes en bases de datos.">
+<!-- Fuentes de Google: Bricolage Grotesque (títulos) y DM Sans (texto) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Hojas de estilo (el orden importa: cada una puede sobrescribir a la anterior) -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/decorations.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<!-- Marca la página como "con JavaScript" antes de pintar, para que las animaciones de aparición no parpadeen -->
+<script>document.documentElement.classList.add("js")</script>
+</head>
+
+<body>
+<!-- NAVEGACIÓN: nombre + enlaces a cada sección + barra de progreso del scroll -->
+<nav><div class="wrap"><b>Isaías</b>
+<ul><li><a href="#sobre-mi">Sobre mí</a></li><li><a href="#proyectos">Proyectos</a></li><li><a href="#talentos">Talentos</a></li><li><a href="#pasatiempos">Pasatiempos</a></li><li><a href="#contacto">Contacto</a></li></ul></div><div class="progress" id="progress"></div></nav>
+
+<!-- PORTADA: presentación y composición de figuras matemáticas -->
+<header class="hero"><div class="wrap">
+  <div>
+    <h1>Hola, soy Isaías.</h1>
+    <p class="lead">Desarrollo proyectos donde convergen la tecnología, el diseño de bases de datos y la elegancia de las matemáticas.</p>
+    <a class="btn" href="#proyectos">Ver proyectos</a><a class="btn alt" href="#contacto">Escríbeme</a>
+  </div>
+<!-- Composición de 4 cuadros con figuras (decorativa, oculta para lectores de pantalla) -->
+  <div class="art" aria-hidden="true">
+<!-- Cuadro 1: cuadrícula cartesiana, π, ∑ e iniciales -->
+    <div class="a"><svg viewBox="0 0 100 100"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1"><path d="M25 0V100M50 0V100M75 0V100M0 25H100M0 50H100M0 75H100"/></g><text x="9" y="19" font-size="13" fill="currentColor" opacity=".55">π</text><text x="82" y="93" font-size="13" fill="currentColor" opacity=".55">∑</text></svg><span>PR</span></div>
+<!-- Cuadro 2: ejes con onda seno animada -->
+    <div class="b"><svg viewBox="0 0 100 100"><g stroke="currentColor" stroke-opacity=".35" stroke-width="1"><path d="M8 50H92M50 8V92"/></g><path class="wave" d="M10 50C22 8 38 8 50 50S78 92 90 50" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg></div>
+<!-- Cuadro 3: círculo unitario con ángulo θ -->
+    <div class="c"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M20 100H100" stroke-width="2"/><path d="M100 100L34.5 54.1" stroke-width="2.5"/><path d="M34.5 54.1V100" stroke-width="1.5" stroke-dasharray="3 4"/><path d="M72 100A28 28 0 0 1 77.1 83.9" stroke-width="2"/><circle cx="34.5" cy="54.1" r="3.5" fill="currentColor" stroke="none"/><text x="58" y="92" font-size="10" fill="currentColor" stroke="none">θ</text></svg></div>
+<!-- Cuadro 4: triángulo inscrito que gira + teorema de Pitágoras -->
+    <div class="d"><svg viewBox="0 0 100 100" fill="none" stroke="#CBE07E" stroke-linejoin="round"><circle cx="50" cy="50" r="34" stroke-width="1.5" stroke-opacity=".6"/><polygon class="tri" points="50,16 79.4,67 20.6,67" stroke-width="2.5"/><text x="50" y="94" font-size="8" fill="#F2F2F2" stroke="none" text-anchor="middle">a²+b²=c²</text></svg></div>
+  </div>
+</div></header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+<!-- SOBRE MÍ: historia, datos personales y hexágono decorativo -->
+<section id="sobre-mi" class="dark"><div class="wrap"><svg class="about-deco" viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><g class="hx"><polygon points="90,50 70,84.6 30,84.6 10,50 30,15.4 70,15.4"/><path d="M50 15.4L70 84.6H30Z" stroke-opacity=".6"/></g><circle cx="50" cy="50" r="4" fill="currentColor"/></svg>
+  <div>
+    <h2>Sobre mí</h2>
+    <div class="about">
+      <p>Nací y crecí en Tuxtla Gutiérrez, la capital del estado de Chiapas, México. Desde siempre he sentido una gran fascinación por la resolución de problemas y la lógica, lo que me llevó a adentrarme en el mundo del desarrollo de software y las ciencias de la computación.</p>
+      <p>Actualmente cursando la carrera de ingeniería, perfecciono mis habilidades técnicas y me enfoco en áreas donde las matemáticas y el desarrollo tecnológico se potencian entre sí.</p><p>Lo que me impulsa día a día es colaborar en proyectos desafiantes e interesantes que me permitan aprender, innovar y crear un impacto positivo a través de la tecnología.</p>
+    </div>
+  </div>
+  <ul class="facts">
+    <li>Ubicación<span>Tuxtla Gutiérrez, Chiapas, México</span></li>
+    <li>Estudio<span>Ingeniería en Tecnologías de la Información e Innovación Digital (Software)</span></li>
+    <li>Idiomas<span>Español, francés</span></li><li>Lenguajes<span>C++, Java, Python</span></li>
+  </ul>
+</div></section>
+
+<!-- PROYECTOS: tres tarjetas (cada una con su figura SVG de fondo) -->
+<section id="proyectos"><div class="wrap">
+  <h2>Proyectos</h2>
+  <div class="projects">
+    <article class="card"><small>Aplicación web (PWA)</small><h3>Law Pocket</h3><p>Plataforma web progresiva para la gestión integral y el almacenamiento seguro de expedientes jurídicos de abogados y despachos. Mi primer proyecto comercializado con éxito.</p><svg class="deco" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 175C50 5 150 5 180 175" class="dr" stroke-width="3"/><path d="M20 175L50 5M180 175L150 5" stroke-width="1.5" stroke-dasharray="4 6"/><path d="M15 120C70 190 130 40 195 80" stroke-opacity=".5"/><circle cx="20" cy="175" r="7" fill="currentColor"/><circle cx="180" cy="175" r="7" fill="currentColor"/><circle cx="50" cy="5" r="5"/><circle cx="150" cy="5" r="5"/></svg><span class="yr">2026</span></article>
+    <article class="card"><small>App móvil / EdTech</small><h3>Road Math</h3><p>Aplicación móvil que fortalece el aprendizaje de cálculo elemental y avanzado, guiando a los estudiantes por límites, derivadas e integrales.</p><svg class="deco" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g class="spin"><rect x="15.0" y="15.0" width="170.0" height="170.0" transform="rotate(0 100 100)"/><rect x="26.9" y="26.9" width="146.2" height="146.2" transform="rotate(9 100 100)"/><rect x="37.1" y="37.1" width="125.7" height="125.7" transform="rotate(18 100 100)"/><rect x="45.9" y="45.9" width="108.1" height="108.1" transform="rotate(27 100 100)"/><rect x="53.5" y="53.5" width="93.0" height="93.0" transform="rotate(36 100 100)"/><rect x="60.0" y="60.0" width="80.0" height="80.0" transform="rotate(45 100 100)"/><rect x="65.6" y="65.6" width="68.8" height="68.8" transform="rotate(54 100 100)"/><rect x="70.4" y="70.4" width="59.1" height="59.1" transform="rotate(63 100 100)"/><rect x="74.6" y="74.6" width="50.9" height="50.9" transform="rotate(72 100 100)"/><rect x="78.1" y="78.1" width="43.7" height="43.7" transform="rotate(81 100 100)"/></g><circle cx="100" cy="100" r="3.5" fill="currentColor"/></svg><span class="yr">2026</span></article>
+    <article class="card"><small>Educación / Emprendimiento</small><h3>Tutorías privadas de matemáticas</h3><p>Enseñanza personalizada hasta cálculo integral, que une la pedagogía con herramientas tecnológicas interactivas como Road Math.</p><svg class="deco" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20V180H192" stroke-width="2.5"/><path d="M20 60H192M20 100H192M20 140H192" stroke-width="1.2" stroke-dasharray="4 6"/><path class="dr" d="M24 174C80 172 140 140 184 36" stroke-width="3.5"/><circle cx="184" cy="36" r="8" fill="currentColor"/></svg><span class="yr">2026</span></article>
+  </div>
+</div></section>
+
+<!-- TALENTOS Y PASATIEMPOS: bloques de color y etiquetas con símbolos -->
+<section id="talentos"><div class="wrap" style="display:block">
+  <h2>Talentos</h2>
+  <div class="talents"><div class="talent"><svg class="tdeco" viewBox="0 0 84 70" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="currentColor" stroke="none" font-family="monospace" font-weight="700"><text x="2" y="28" font-size="24">&lt;/&gt;</text><text x="2" y="58" font-size="20" opacity=".6">1010</text></g></svg>Tecnología</div><div class="talent"><svg class="tdeco" viewBox="0 0 84 70" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="currentColor" stroke="none"><text x="4" y="56" font-size="56" font-family="serif" font-style="italic">∫</text><text x="38" y="32" font-size="15" font-family="serif">√x</text><text x="40" y="58" font-size="15" font-family="serif" opacity=".6">dx</text></g></svg>Matemáticas</div><div class="talent"><svg class="tdeco" viewBox="0 0 84 70" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M42 12L14 54M42 12V54M42 12L70 54"/><g fill="currentColor"><circle cx="42" cy="12" r="7"/><circle cx="14" cy="54" r="5.5"/><circle cx="42" cy="54" r="5.5"/><circle cx="70" cy="54" r="5.5"/></g></svg>Planificación estratégica</div><div class="talent"><svg class="tdeco" viewBox="0 0 84 70" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="30" cy="28" r="20"/><circle cx="52" cy="28" r="20"/><circle cx="41" cy="46" r="20"/></svg>Creatividad</div></div>
+<!-- Pasatiempos (el id permite enlazarlo desde el menú) -->
+  <h2 id="pasatiempos" class="sub">Pasatiempos</h2>
+  <div class="hobbies"><span><b aria-hidden="true">∑</b>Resolver problemas de matemáticas</span><span><b aria-hidden="true">◇</b>Jugar videojuegos</span><span><b aria-hidden="true">∿</b>Escuchar música</span><span><b aria-hidden="true">→</b>Correr</span><span><b aria-hidden="true">△</b>Hacer ejercicio</span></div>
+</div></section>
+
+<!-- CONTACTO: correo, Instagram y figuras de fondo -->
+<section id="contacto" class="contact"><svg class="cdeco" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="100" cy="100" r="92"/><circle cx="100" cy="100" r="66"/><circle cx="100" cy="100" r="40"/><path d="M8 100H192M100 8V192" stroke-opacity=".5"/><rect class="sq" x="55" y="55" width="90" height="90"/><rect class="sq2" x="28" y="28" width="144" height="144" stroke-dasharray="4 6"/></svg><div class="wrap">
+  <h2>Hablemos.</h2>
+  <p>¿Tienes un proyecto o una idea? Escríbeme, me encantará colaborar.</p>
+  <div class="cbtns"><a class="btn" href="mailto:pablitoisaiasrodriguezcruz@gmail.com">pablitoisaiasrodriguezcruz@gmail.com</a><a class="btn out" href="https://www.instagram.com/isaias.r_c" target="_blank" rel="noopener">Instagram</a></div>
+</div></section>
+</main>
+<!-- PIE DE PÁGINA -->
+<footer><div class="wrap">© 2026 Isaías</div></footer>
+
+<!-- Lógica: barra de progreso y animaciones de aparición al hacer scroll -->
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* ==========================================================
+ * decorations.css — Figuras matemáticas decorativas (SVG)
+ * ========================================================== */
+
+/* ----------------------------------------------------------
+ * Tarjetas de Proyectos: Figura decorativa de fondo
+ * ---------------------------------------------------------- */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card .deco {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--on);
+  opacity: 0.3;
+  pointer-events: none;
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.card > *:not(.deco) {
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover .deco {
+  transform: scale(1.07);
+}
+
+/* Animaciones específicas de tarjetas */
+.card .spin {
+  transform-origin: 50% 50%;
+  animation: spin 50s linear infinite;
+}
+
+.card .dr {
+  stroke-dasharray: 400;
+  animation: drawb 4s ease-in-out infinite alternate;
+}
+
+/* ----------------------------------------------------------
+ * Talentos: Figura en la esquina
+ * ---------------------------------------------------------- */
+.talent {
+  position: relative;
+  overflow: hidden;
+}
+
+.tdeco {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 84px;
+  height: 64px;
+  opacity: 0.7;
+}
+
+/* ----------------------------------------------------------
+ * Pasatiempos: Símbolo matemático giratorio
+ * ---------------------------------------------------------- */
+.hobbies b {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: 500;
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.hobbies span:hover b {
+  transform: rotate(360deg);
+}
+
+/* ----------------------------------------------------------
+ * Contacto: Figuras geométricas giratorias y botones
+ * ---------------------------------------------------------- */
+.contact {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.cdeco {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  margin-top: -210px;
+  width: 420px;
+  height: 420px;
+  color: var(--on);
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.cdeco .sq {
+  transform-origin: 50% 50%;
+  animation: spin 40s linear infinite;
+}
+
+.cdeco .sq2 {
+  transform-origin: 50% 50%;
+  animation: spin 60s linear infinite reverse;
+}
+
+/* Botones de la sección contacto */
+.cbtns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contact .btn {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.contact .btn.out {
+  background: transparent;
+  color: var(--on);
+  box-shadow: inset 0 0 0 2px var(--on);
+}
+
+.contact .btn.out:hover {
+  background: var(--lime);
+  color: var(--on);
+}
+
+/* ----------------------------------------------------------
+ * Sobre mí: Hexágono giratorio
+ * ---------------------------------------------------------- */
+#sobre-mi .wrap {
+  position: relative;
+}
+
+.about-deco {
+  position: absolute;
+  right: 28px;
+  top: -6px;
+  width: 84px;
+  height: 84px;
+  color: var(--lime);
+  opacity: 0.55;
+}
+
+.about-deco .hx {
+  transform-origin: 50% 50%;
+  animation: spin 30s linear infinite;
+}
+
+/* ----------------------------------------------------------
+ * Keyframes
+ * ---------------------------------------------------------- */
+@keyframes drawb {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ----------------------------------------------------------
+ * Media Queries
+ * ---------------------------------------------------------- */
+@media (max-width: 860px) {
+  .cdeco {
+    width: 260px;
+    height: 260px;
+    margin-top: -130px;
+    right: -90px;
+    opacity: 0.16;
+  }
+}

@@ -1,0 +1,101 @@
+/* ==========================================================
+ * base.css — Variables de color, modo oscuro, reset y estilos globales
+ * ========================================================== */
+
+/* ----------------------------------------------------------
+ * Variables de color y configuración global (:root)
+ * ---------------------------------------------------------- */
+:root {
+  /* Fondo y texto principal */
+  --bg: #F2F2F2;
+  --fg: #2B2B2B;
+  --muted: #666666;
+  --line: #DADADA;
+
+  /* Paleta de acentos */
+  --teal: #5EC8C0;
+  --coral: #F46B74;
+  --lime: #CBE07E;
+  --char: #4D4D4D;
+
+  /* Modificadores de texto sobre fondos con color */
+  --on: #2B2B2B;
+  --light: #F2F2F2;
+
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* ----------------------------------------------------------
+ * Modo Oscuro (Preferencia del Sistema y Manual)
+ * ---------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1D1D1F;
+    --fg: #F2F2F2;
+    --muted: #A8A8A8;
+    --line: #343437;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #1D1D1F;
+  --fg: #F2F2F2;
+  --muted: #A8A8A8;
+  --line: #343437;
+}
+
+/* ----------------------------------------------------------
+ * Reset y Comportamiento Global
+ * ---------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* ----------------------------------------------------------
+ * Tipografía y Enlaces
+ * ---------------------------------------------------------- */
+h1,
+h2,
+h3 {
+  font-family: 'Bricolage Grotesque', 'DM Sans', system-ui, sans-serif;
+  margin: 0;
+  line-height: 1.05;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ----------------------------------------------------------
+ * Layout y Contenedores
+ * ---------------------------------------------------------- */
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 28px;
+}

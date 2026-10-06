@@ -1,0 +1,87 @@
+/* ==========================================================
+ * layout.css — Secciones a pantalla completa
+ * ========================================================== */
+
+/* ----------------------------------------------------------
+ * Variables de altura de viewport y scroll snapping
+ * ---------------------------------------------------------- */
+/* --sec = alto de la pantalla menos la barra de navegación */
+:root {
+  --sec: calc(100vh - 64px);
+}
+
+/* @supports evita saltos en navegadores móviles modernos */
+@supports (height: 100svh) {
+  :root {
+    --sec: calc(100svh - 64px);
+  }
+}
+
+/* Al hacer scroll, la página se acomoda al inicio de cada sección */
+html {
+  scroll-snap-type: y proximity;
+  scroll-padding-top: calc(64px + env(safe-area-inset-top, 0px));
+}
+
+/* ----------------------------------------------------------
+ * Disposición y comportamiento de secciones
+ * ---------------------------------------------------------- */
+/* Cada sección ocupa al menos toda la pantalla y centra su contenido */
+.hero,
+main > section {
+  min-height: var(--sec);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.hero > .wrap,
+main > section > .wrap {
+  width: 100%;
+}
+
+main > section {
+  padding: 56px 0;
+}
+
+.hero {
+  padding: 40px 0;
+}
+
+/* ----------------------------------------------------------
+ * Sección Talentos
+ * ---------------------------------------------------------- */
+/* Separador y espacio entre Talentos y Pasatiempos */
+#talentos {
+  border-top: 1px solid var(--line);
+}
+
+h2.sub {
+  margin-top: 56px;
+}
+
+/* ----------------------------------------------------------
+ * Media Queries
+ * ---------------------------------------------------------- */
+/* Pantallas altas: tarjetas y bloques más grandes para aprovechar espacio */
+@media (min-width: 861px) and (min-height: 800px) {
+  .card {
+    min-height: 400px;
+  }
+
+  .talent {
+    min-height: 210px;
+  }
+
+  h2 {
+    margin-bottom: 56px;
+  }
+}
+
+/* Pantallas muy anchas: contenedor con mayor ancho máximo */
+@media (min-width: 1280px) {
+  .wrap {
+    max-width: 1180px;
+  }
+}

@@ -1,0 +1,146 @@
+/* ==========================================================
+ * hero.css — Portada, botones y composición de figuras
+ * ========================================================== */
+
+/* ----------------------------------------------------------
+ * Portada: Estructura general
+ * ---------------------------------------------------------- */
+.hero {
+  padding: 72px 0 88px;
+}
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+/* Título principal y texto de presentación */
+h1 {
+  font-size: clamp(2.8rem, 7.5vw, 5.6rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 1.2rem;
+  max-width: 44ch;
+  margin: 24px 0 36px;
+}
+
+/* ----------------------------------------------------------
+ * Botones: Principal (.btn) y Secundario (.btn.alt)
+ * ---------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 15px 28px;
+  border-radius: 14px;
+  font-weight: 500;
+  background: var(--char);
+  color: var(--light);
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: var(--coral);
+  color: var(--on);
+}
+
+.btn.alt {
+  background: transparent;
+  color: var(--fg);
+  box-shadow: inset 0 0 0 2px var(--fg);
+  margin-left: 10px;
+}
+
+.btn.alt:hover {
+  background: var(--lime);
+  color: var(--on);
+  box-shadow: inset 0 0 0 2px var(--lime);
+}
+
+/* ----------------------------------------------------------
+ * Composición 2x2 de figuras (.art)
+ * ---------------------------------------------------------- */
+.art {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  max-width: 440px;
+  justify-self: end;
+  width: 100%;
+}
+
+.art > * {
+  aspect-ratio: 1;
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
+  color: var(--on);
+  animation: pop 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.art svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Tiempos escalonados de la animación */
+.art > :nth-child(2) { animation-delay: 0.08s; }
+.art > :nth-child(3) { animation-delay: 0.16s; }
+.art > :nth-child(4) { animation-delay: 0.24s; }
+
+/* ----------------------------------------------------------
+ * Variantes de los cuadros decorativos
+ * ---------------------------------------------------------- */
+/* Cuadro 1 (turquesa): Cuadrícula e iniciales */
+.art .a {
+  background: var(--teal);
+  border-radius: 28px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-heading, 'Bricolage Grotesque', sans-serif);
+  font-weight: 800;
+  font-size: 3.4rem;
+  color: var(--on);
+}
+
+.art .a span {
+  position: relative;
+}
+
+/* Cuadro 2 (coral): Círculo */
+.art .b {
+  background: var(--coral);
+  border-radius: 50%;
+}
+
+/* Cuadro 3 (lima): Cuarto de círculo */
+.art .c {
+  background: var(--lime);
+  border-radius: 100% 0 0 0;
+}
+
+/* Cuadro 4 (carbón): Triángulo/Base oscura */
+.art .d {
+  background: var(--char);
+  border-radius: 28px;
+}
+
+/* ----------------------------------------------------------
+ * Keyframes
+ * ---------------------------------------------------------- */
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

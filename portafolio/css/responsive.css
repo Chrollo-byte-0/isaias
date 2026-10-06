@@ -1,0 +1,89 @@
+/* ==========================================================
+ * responsive.css — Accesibilidad y diseño adaptable (responsive)
+ * ========================================================== */
+
+/* ----------------------------------------------------------
+ * Accesibilidad: Reducción de movimiento si se solicita en el SO
+ * ---------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ----------------------------------------------------------
+ * Tablet y Móvil (hasta 860px)
+ * Ajustes de distribución a 1 columna, navegación y espaciados
+ * ---------------------------------------------------------- */
+@media (max-width: 860px) {
+
+  /* Navegación horizontal deslizante */
+  nav ul {
+    gap: 18px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-left: 16px;
+    min-width: 0;
+    white-space: nowrap;
+  }
+
+  nav ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav li,
+  nav b {
+    flex: none;
+  }
+
+  /* Espaciados globales de secciones */
+  section {
+    padding: 60px 0;
+  }
+
+  main > section {
+    padding: 48px 0;
+  }
+
+  /* Hero & Sobre mí */
+  .hero {
+    padding: 40px 0 56px;
+  }
+
+  .hero .wrap,
+  #sobre-mi .wrap {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .art {
+    justify-self: start;
+    max-width: 300px;
+  }
+
+  /* Rejilla de Proyectos */
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 240px;
+  }
+
+  /* Rejilla de Talentos */
+  .talents {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Botones */
+  .btn.alt {
+    margin: 10px 0 0;
+  }
+}
